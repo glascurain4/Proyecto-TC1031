@@ -1,10 +1,10 @@
 # Proyecto-TC1031
 
-### Vehicle Inventory Management System
+### Vehicle Inventory Management
 Este programa permite gestionar un inventario de vehículos, proporcionando funcionalidades para ordenar el inventario por atributos como precio, año o marca, y buscar vehículos por precio utilizando una búsqueda binaria.
 
 ### Descripción del Proyecto
-El Vehicle Inventory Management System es un programa diseñado para manejar un inventario de vehículos, permitiendo ordenar el inventario basado en diferentes atributos, como el precio, el año del vehículo o la marca. También incluye la funcionalidad de realizar una búsqueda binaria para encontrar un vehículo específico según su precio.
+El Vehicle Inventory Management es un programa diseñado para manejar un inventario de vehículos, permitiendo ordenar el inventario basado en diferentes atributos, como el precio, el año del vehículo o la marca. También incluye la funcionalidad de realizar una búsqueda binaria para encontrar un vehículo específico según su precio.
 
 ### Características
 Mostrar inventario completo: Visualiza una lista de vehículos con su precio, color, tipo, marca y año.
