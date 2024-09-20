@@ -13,7 +13,7 @@ void mostrarInventario(vector<Vehiculo>& vehiculos) {
 }
 
 //Funcion Merge para cada caso usando vectores
-void merge(vector<Vehiculo>& vehiculos, int inicio, int medio, int fin, const string& atributo) {
+void merge(vector<Vehiculo>& vehiculos, int inicio, int medio, int fin, string atributo) {
     int n1 = medio - inicio + 1;
     int n2 = fin - medio;
 
@@ -66,7 +66,7 @@ void merge(vector<Vehiculo>& vehiculos, int inicio, int medio, int fin, const st
 }
 
 // Merge Sort usando vectores
-void mergeSort(vector<Vehiculo>& vehiculos, int inicio, int fin, const string& atributo) {
+void mergeSort(vector<Vehiculo>& vehiculos, int inicio, int fin, string atributo) {
     if (inicio < fin) {
         int medio = inicio + (fin - inicio) / 2;
 
@@ -102,6 +102,8 @@ int busquedaBinaria(vector<Vehiculo>& vehiculos, float precioBuscado) {
 }
 
 int main() {
+
+    //Inventario
     vector<Vehiculo> vehiculos = {
         {350000, "Rojo", "Sedán", "Volkswagen", 2018},
         {600000, "Negro", "Sedán", "Mercedes", 2020},
