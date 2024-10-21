@@ -1,0 +1,22 @@
+30000.0 Rojo SUV Toyota 2021
+25000.0 Negro Sedan Honda 2020
+15000.0 Azul Coupe Ford 2019
+20000.0 Verde Hatchback Chevrolet 2022
+18000.0 Blanco SUV Nissan 2018
+22000.0 Gris SUV Kia 2020
+27000.0 Amarillo Sedan BMW 2021
+31000.0 Naranja Coupe Audi 2023
+28000.0 Violeta Hatchback Volkswagen 2021
+29000.0 Rosa SUV Mazda 2019
+35000.0 Plata SUV Lexus 2022
+26000.0 Marron Sedan Subaru 2020
+34000.0 Celeste Coupe Porsche 2023
+33000.0 Negro SUV Ford 2022
+36000.0 Blanco SUV Tesla 2021
+40000.0 Rojo Sedan Benz 2023
+37000.0 Verde SUV Hyundai 2020
+32000.0 Gris Coupe Toyota 2021
+25000.0 Amarillo Hatchback Kia 2019
+30000.0 Violeta SUV Chevrolet 2023
+24000.0 Naranja SUV Honda 2022
+
