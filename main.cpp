@@ -1,7 +1,9 @@
 /*
+
 Author: Gabriel Lascurain
 
 A01707236
+
 */
 
 #include <iostream>
@@ -110,6 +112,7 @@ int main() {
                 break;
             }
         }
+        break;
     }
 
     return 0;
