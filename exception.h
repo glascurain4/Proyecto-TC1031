@@ -1,4 +1,4 @@
-#ifndef EXCEPTION_H_
+#ifndef EXCEPTION_H_			//Prestado del material de clase
 #define EXCEPTION_H_
 
 #include <exception>

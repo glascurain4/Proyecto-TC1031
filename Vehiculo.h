@@ -1,3 +1,11 @@
+/*
+
+Author: Gabriel Lascurain
+
+A01707236
+
+*/
+
 #ifndef VEHICULO_H
 #define VEHICULO_H
 

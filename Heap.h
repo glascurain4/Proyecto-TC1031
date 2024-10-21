@@ -1,5 +1,5 @@
-#ifndef HEAP_H_
-#define HEAP_H_
+#ifndef HEAP_H_			//Reciclado del código visto en clase del viernes 18 Oct
+#define HEAP_H_			//adaptado a los requerimientos de mi clase Vehiculo
 
 #include <string>
 #include <sstream>
