@@ -51,9 +51,19 @@ void BuscarVehiculoPorPrecio(Heap<Vehiculo>& heap, float precioBuscado) {
 
 int main() {
     Heap<Vehiculo> heap(100); //Creamos un heap de tamaño 100
+
+    Vehiculo vehiculo1(300000, "negro", "Sedan", "Volkswagen", 2018);
+    Vehiculo vehiculo2(210000, "blanco", "Camioneta", "Volkswagen", 2020);
+    Vehiculo vehiculo3(180000, "rojo", "Sedan", "Toyota", 2016);
+    Vehiculo vehiculo4(120000, "negro", "Hatchbag", "Renault", 2010);
+    heap.add(vehiculo1);
+    heap.add(vehiculo2);
+    heap.add(vehiculo3);
+    heap.add(vehiculo4);
+
     int opcion;
 
-    while (opcion != 4) {
+    while (opcion != 5) {
         mostrarMenu();
         cin >> opcion;
 
@@ -112,7 +122,6 @@ int main() {
                 break;
             }
         }
-        break;
     }
 
     return 0;
