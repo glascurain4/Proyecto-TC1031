@@ -72,7 +72,3 @@ La decisión de usar Merge Sort fue la más adecuada para este proyecto, ya que 
 **Consulta y carga de datos**  
 El programa implementa mecanismos correctos para consultar la información de las estructuras de datos. Además, incluye la funcionalidad de lectura de archivos para cargar datos al inventario, asegurando que la estructura de datos se construya correctamente desde las fuentes externas.
 
----
-
-Con estos cambios, cumples con las recomendaciones y los criterios de evaluación para el avance del proyecto.
-
