@@ -29,7 +29,7 @@ void ImprimeInventario(Heap<Vehiculo>& heap) {
         << heap.data[i].getTipo() << " | "
         << heap.data[i].getColor() << " | "
         << heap.data[i].getAnio() << " | "
-        << heap.data[i].getPrecio() << " |" << endl;
+        << " $ " << heap.data[i].getPrecio() << " |" << endl;
     }
     cout << "-----------------------------------------------------------" << endl;
 }
