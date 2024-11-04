@@ -111,8 +111,8 @@ Heap<Vehiculo> cargarHeap(const string& nombreArchivo) { //Lectura de archivos !
 }
 
 int main() {
-    string nombreArchivo = "vehiculos.txt";
-    Heap<Vehiculo> heap = cargarHeap(nombreArchivo);
+    string archivo = "vehiculos.txt";
+    Heap<Vehiculo> heap = cargarHeap(archivo);
     int opcion;
 
     while (opcion != 5) {
@@ -148,8 +148,10 @@ int main() {
             case 2: {
                 try {
                     float precioEliminado;
+
                     cout << "Ingrese el precio del vehiculo a eliminar: ";
                     cin >> precioEliminado;
+
                     Vehiculo vehiculoEliminado = heap.remove(precioEliminado);
                     cout << "Vehiculo eliminado: " << vehiculoEliminado.getDatos() << "\n";
                 } catch (const NoSuchElement&) {
