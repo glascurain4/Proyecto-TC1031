@@ -31,7 +31,7 @@ void ImprimeInventario(Heap<Vehiculo>& heap) {
     cout << "|    Marca    |   Tipo   |   Color   |  Año  |  Precio  |" << endl;
     cout << "-----------------------------------------------------------" << endl;
 
-    for (unsigned int i = 0; i < heap.count; ++i) {
+    for (int i = 0; i < heap.count; ++i) {
         cout << "| " << heap.data[i].getMarca() << " | "
         << heap.data[i].getTipo() << " | "
         << heap.data[i].getColor() << " | "
@@ -43,7 +43,7 @@ void ImprimeInventario(Heap<Vehiculo>& heap) {
 
 void BuscarVehiculoPorPrecio(Heap<Vehiculo>& heap, float precioBuscado) {
     bool encontrado = false;
-    for (unsigned int i = 0; i < heap.count; ++i) {
+    for (int i = 0; i < heap.count; ++i) {
         if (heap.data[i].getPrecio() == precioBuscado) {
             cout << "Vehículo encontrado: " << heap.data[i].getDatos() << endl;
             encontrado = true;
