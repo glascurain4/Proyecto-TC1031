@@ -54,13 +54,13 @@ void BuscarVehiculoPorPrecio(Heap<Vehiculo>& heap, float precioBuscado) {
     }
 }
 
-string trim(const string& str) {
+string trim(const string& str) {         //Esta un poco confuso esto pero es la unica manera en la que me funcionó
     size_t first = str.find_first_not_of(" \t");
-    size_t last = str.find_last_not_of(" \t");
+    size_t last = str.find_last_not_of(" \t");    
     return (first == string::npos || last == string::npos) ? "" : str.substr(first, last - first + 1);
 }
 
-Heap<Vehiculo> cargarHeap(const string& nombreArchivo) {
+Heap<Vehiculo> cargarHeap(const string& nombreArchivo) { //Lectura de archivos !!!
     Heap<Vehiculo> heap(100);
     ifstream archivo(nombreArchivo);
 
