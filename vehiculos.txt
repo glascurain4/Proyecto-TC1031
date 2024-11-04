@@ -19,5 +19,28 @@
 250000, Amarillo, Hatchback, Kia, 2019
 300000, Violeta, SUV, Chevrolet, 2023
 240000, Naranja, SUV, Honda, 2022
-
+280000, Blanco, Sedan, Lexus, 2021
+190000, Verde, Coupe, BMW, 2020
+210000, Negro, Hatchback, Ford, 2018
+220000, Azul, SUV, Nissan, 2019
+310000, Marron, Coupe, Audi, 2022
+270000, Rojo, Sedan, Hyundai, 2021
+320000, Gris, SUV, Tesla, 2022
+230000, Plata, Hatchback, Subaru, 2020
+240000, Negro, Sedan, Honda, 2019
+260000, Celeste, Coupe, Volkswagen, 2023
+280000, Azul, SUV, Mazda, 2020
+250000, Rojo, Hatchback, Chevrolet, 2019
+290000, Naranja, SUV, Kia, 2023
+350000, Gris, Sedan, Toyota, 2021
+330000, Violeta, SUV, Benz, 2022
+340000, Blanco, Hatchback, BMW, 2018
+300000, Verde, Coupe, Porsche, 2021
+310000, Negro, Sedan, Lexus, 2020
+360000, Celeste, SUV, Hyundai, 2023
+380000, Azul, Coupe, Ford, 2022
+240000, Marron, Hatchback, Nissan, 2021
+270000, Naranja, Sedan, Mazda, 2019
+290000, Plata, SUV, Subaru, 2023
+310000, Negro, SUV, Audi, 2021
 
