@@ -20,7 +20,7 @@ void mostrarMenu() {
     cout << "1. Agregar Vehiculo" << endl;
     cout << "2. Eliminar Vehiculo" << endl;
     cout << "3. Imprimir Inventario" << endl;
-    cout << "4. Buscar Vehiculo por precio" << endl;
+    cout << "4. Establecer presupuesto" << endl;
     cout << "5. Salir" << endl;
     cout << "Seleccione una opción: " << endl;
 }
@@ -41,17 +41,25 @@ void ImprimeInventario(Heap<Vehiculo>& heap) {
     cout << "-----------------------------------------------------------" << endl;
 }
 
-void BuscarVehiculoPorPrecio(Heap<Vehiculo>& heap, float precioBuscado) {
-    bool encontrado = false;
-    for (int i = 0; i < heap.count; ++i) {
-        if (heap.data[i].getPrecio() == precioBuscado) {
-            cout << "Vehículo encontrado: " << heap.data[i].getDatos() << endl;
-            encontrado = true;
-        }
+void BuscarPorPresupuesto(Heap<Vehiculo>& heap, float precioBuscado) {
+    int limite = 0;
+    for (int i = 0; i < heap.count && heap.data[i].getPrecio() <= precioBuscado; ++i ) {
+        limite++;
     }
-    if (!encontrado) {
-        cout << "No se encontró ningún vehículo con el precio: $" << precioBuscado << endl;
+
+    cout << "\nVehículos dentro del presupuesto:" << endl;
+    cout << "-----------------------------------------------------------" << endl;
+    cout << "|    Marca    |   Tipo   |   Color   |  Año  |  Precio  |" << endl;
+    cout << "-----------------------------------------------------------" << endl;
+
+    for (int i = 0; i < limite; ++i) {
+        cout << "| " << heap.data[i].getMarca() << " | "
+        << heap.data[i].getTipo() << " | "
+        << heap.data[i].getColor() << " | "
+        << heap.data[i].getAnio() << " | "
+        << " $ " << heap.data[i].getPrecio() << " |" << endl;
     }
+    cout << "-----------------------------------------------------------" << endl;
 }
 
 string trim(const string& str) {         //Esta un poco confuso esto pero es la unica manera en la que me funcionó
@@ -165,9 +173,9 @@ int main() {
             }
             case 4: { 
                 float precioBuscado;
-                cout << "Ingrese el precio a buscar: ";
+                cout << "Ingrese el presupuesto a evaluar: ";
                 cin >> precioBuscado;
-                BuscarVehiculoPorPrecio(heap, precioBuscado);
+                BuscarPorPresupuesto(heap, precioBuscado);
                 break;
             }
             case 5: {
