@@ -14,9 +14,9 @@ En el segundo avance cambiamos la estructura de datos de nuestro inventario, mov
 Cambio 1: MergeSort por Min-Heap. A pesar de ambos compartir la complejidad O(nlog(n)) en su caso promedio, el Min-Heap es más eficiente de ser necesario acceder más frecuentemente a los vehículos más baratos (O(1) en caso del más barato) y de requerir actualizaciones constantes del inventario, eliminando y agregando vehiculos constantemente. Considero que es un enfoque más apropiado para el propósito y uso del proyecto.
 
 ### Descripción del Proyecto
-El Vehicle Inventory Management es un programa diseñado para manejar un inventario de vehículos, permitiendo agregar vehiculos al inventario conforme al precio, siguiendo una estructura similar a un arbol binario.
+El Vehicle Inventory Management es un programa diseñado para manejar un inventario de vehículos, permitiendo agregar vehiculos al inventario conforme al precio, siguiendo una estructura Min-Heap.
 
-Búsqueda por precio: Busca un vehículo por su precio utilizando un algoritmo de búsqueda iterativa, ya que es facil de implementar en nuestra estructura de datos con forma de Min-Heap, donde el valor mínimo se encontrará siempre en la raíz o la primera línea de nuestro inventario.
+Establecer Inventario: Busca el límite dentro del heap ordenado, en el que el precio del vehiculo en dicha posición sea superior al establecifo como parámetro. Imprimiendo a partir de ahí todos los vehículos por debajo de ese precio.
 
 Algoritmo de ordenación heapify: El programa utiliza un algoritmo de heapify de tipo Min-Heap, donde de manera recursiva acomoda cada nuevo elemento dentro del arbol, asegurando que esté balanceado.
 
@@ -29,7 +29,7 @@ Al iniciar el programa, se mostrará una lista de opciones a elegir:
 
 3: Imprimir Inventario
 
-4: Buscar por precio
+4: Establecer Inventario
 
 5: Salir
 
@@ -66,7 +66,7 @@ Inventario de vehículos: Una lista con los vehículos que contiene la informaci
 
 Resultado de eliminación: Un mensaje que indica el vehículo eliminado del inventario.
 
-Resultado de búsqueda: El vehículo que coincide con el precio ingresado por el usuario. Si no se encuentra, se informa que no se encontró ningún vehículo con ese precio.
+Resultado de presupuesto: Una lista de los vehiculos por debajo del precio establecido como presupuesto.
 
 ### Desarrollo de Competencias
 
@@ -96,14 +96,14 @@ Resultado de búsqueda: El vehículo que coincide con el precio ingresado por el
 - **Acceso al mínimo**: \(O(1)\) en todos los casos, porque el menor elemento está siempre en la raíz del heap, lo cual es útil para inventarios en los que el producto más económico tiende a venderse más rápido.
 
 #### Vector de Datos (`data`)
-- El arreglo `data` de la clase `Heap` actúa como una estructura contenedora interna. Acceder a un elemento específico en este arreglo tiene una complejidad constante, \(O(1)\). Sin embargo, el acceso secuencial para operaciones como `ImprimeInventario` y `BuscarVehiculoPorPrecio` tiene una complejidad de \(O(n)\), ya que debe recorrer todos los elementos.
+- El arreglo `data` de la clase `Heap` actúa como una estructura contenedora interna. Acceder a un elemento específico en este arreglo tiene una complejidad constante, \(O(1)\). Sin embargo, el acceso secuencial para operaciones como `ImprimeInventario` y `BuscarPorPresupuesto` tiene una complejidad de \(O(n)\), ya que debe recorrer todos los elementos.
 
 ### 3. **Análisis de Complejidad de Otros Componentes**
 
-#### Búsqueda de Vehículo por Precio (`BuscarVehiculoPorPrecio`)
-- Este método recorre todo el arreglo para encontrar coincidencias en el precio, por lo cual:
-  - **Mejor caso**: \(O(1)\) si el primer vehículo coincide con el precio.
-  - **Caso promedio y peor caso**: \(O(n)\) si debe recorrer el arreglo completo para encontrar el precio o confirmar su ausencia.
+#### Búsqueda de Vehículo por Precio (`BuscarPorPresupuesto`)
+- Este método recorre todo el arreglo hasta encontrar un vehiculo de mayor precio al establecido por el presupuesto.
+  - **Mejor caso**: \(O(1)\) si el primer vehículo está por encima del presupuesto.
+  - **Caso promedio y peor caso**: \(O(n)\) si debe recorrer el arreglo completo para encontrar los vehiuclos dentro del presupuesto.
   
 #### Imprimir Inventario (`ImprimeInventario`)
 - Imprimir todo el inventario implica recorrer el arreglo completo y mostrar la información de cada vehículo, resultando en:
@@ -111,11 +111,7 @@ Resultado de búsqueda: El vehículo que coincide con el precio ingresado por el
 
 ### 4. **Complejidad Final del Programa**
 
-Al considerar el flujo principal del programa, la complejidad global dependerá del uso de `Heap`. Ya que el programa efectúa una secuencia de operaciones de inserción, eliminación y búsqueda, la complejidad final del programa sería:
-
-- **Complejidad para acceso rápido al menor precio**: \(O(1)\)
-- **Inserción y eliminación de elementos**: \(O(\log n)\) para cada operación.
-- **Búsqueda en el inventario por precio**: \(O(n)\)
+Al considerar el flujo principal del programa, la complejidad global dependerá del uso de `Heap`. Ya que el programa efectúa una secuencia de operaciones de inserción, eliminación y búsqueda, la complejidad final del programa sería: \(O(n)\)
 
 ## SICT0302: Toma decisiones
 
@@ -137,7 +133,19 @@ La estructura de Min-Heap fue elegida específicamente por su alineación con la
 
 Considero que aprendí a utilizar correctamente los diferentes mecanismos de consulta de información para las estructuras de datos aprendidas en clase, ya que fui capaz de escoger entre diferentes opciones aquella que más se adoptara no solo a la eficiencia en el manejo de inventarios de manera general, sino comprendiendo el uso real que se le daría a un código de esta naturaleza y adaptando el poryecto en esa vía, pensando en la manera en la que el código será utilizado y haciéndolo lo más eficiente bajo mis conocimientos y habilidades para funcionar de dicha manera.
 
+Vease: 
+
+Archivo \(Heap.h\): Funciones `remove`(líneas 117-138) y `add`(líneas 102-114) .
+
+Archivo \(main.cpp\): Funciones `BuscarPorPresupuesto`(líneas 44-63) e `ImprimeInventario`(líneas 28-42)
+
+
+
 Creo que luego de muchos  intentos y mucho esfuerzo y mucho código que la verdad ni yo sé como logré que funcionara, considero que hice una buena implementación de la lectura de archivos, aprovechando los try y catches para prevenir la mayoría de errores que encontré que podían haber al leer el mismo. Finalmente conseguí que funcionara apropiadamente y estoy satisfecho con el resultado. 
+
+Vease:
+
+Archivo \(main.cpp\): Funciones `cargarHeap`(líneas 71-119) y `trim`(líneas 65-69)
 
 #### Pendiente
 Implementa mecanismos de escritura de archivos para guardar los datos de las estructuras de manera correcta
