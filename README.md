@@ -154,3 +154,7 @@ Archivo \(main.cpp\): Funciones `cargarHeap`(líneas 71-119) y `trim`(líneas 65
 
 
 Del mismo modo, me ayudé de varias fuentes para implementar de manera correcta a mi código la escritura de archivos, la verdad ya entendiendo un poco mejor como funcionadban a partir de prueba y error con las lecturas, no me pareció tan complicado. Lo implementé en la función `BuscarPorPresupuesto`, igualmente en el archivo de \(main.cpp\). (líneas 44-85)
+
+# Problemas
+
+Problema 1: 148 Sort List https://youtu.be/eXSyfJfPjao
