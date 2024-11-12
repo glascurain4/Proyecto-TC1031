@@ -10,8 +10,12 @@ En el primer avance desarrollamos un prototipo para el funcionamiento de este pr
 En el segundo avance cambiamos la estructura de datos de nuestro inventario, moviéndonos a un árbol de tipo Min-Heap, aprovechando sus propiedades y modificando ligeramente la funcion de heapify() para realizar un ordenamiento de los vehículos en base a su precio. Ordenando nuestro inventario a la vez que está siendo agregado y nuevamente implementando la búsqueda iterativa.
 
 # Cambios sobre el primer avance
-
 Cambio 1: MergeSort por Min-Heap. A pesar de ambos compartir la complejidad O(nlog(n)) en su caso promedio, el Min-Heap es más eficiente de ser necesario acceder más frecuentemente a los vehículos más baratos (O(1) en caso del más barato) y de requerir actualizaciones constantes del inventario, eliminando y agregando vehiculos constantemente. Considero que es un enfoque más apropiado para el propósito y uso del proyecto.
+Cambio 2: Implementación de lectura de archivos para el establecimiento de un inventario.
+Cambio 3: Función de eliminar vehículo, anteriormente eliminaba a la raíz (menor precio) como naturalmente hace el heap, lo modifique para que buscara el vehiculo bajo un parámetro de precio que se le pide al usuario, para luego reeordenar el heap, ya que para los requerimientos del proyecto sería mejor poder eliminar cualquier vehiculo y no solo el primero.
+
+# Cambios sobre el segundo avance
+Cambio 1: Implementación de la escitura de archivos, actualizando la función de Búsqueda, para que en lugar de brindarnos los datos de un vehiculo en particular, nos genere un inventario actualizado dentro del presupuesto disponible de nuestro cliente, escribiéndolo en un archivo de texto nuevo que podamos entregarle al cliente para visualizar sus opciones.
 
 ### Descripción del Proyecto
 El Vehicle Inventory Management es un programa diseñado para manejar un inventario de vehículos, permitiendo agregar vehiculos al inventario conforme al precio, siguiendo una estructura Min-Heap.
