@@ -69,7 +69,7 @@ void BuscarPorPresupuesto(Heap<Vehiculo>& heap, float precioBuscado) {
              << heap.data[i].getColor() << " | "
              << heap.data[i].getAnio() << " | "
              << " $ " << heap.data[i].getPrecio() << " |" << endl;
-
+                        //Despplegamos tanto en la terminal como en el archivo de salida
         archivoSalida << "| " << heap.data[i].getMarca() << " | "
                       << heap.data[i].getTipo() << " | "
                       << heap.data[i].getColor() << " | "
