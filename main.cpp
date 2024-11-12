@@ -41,7 +41,7 @@ void ImprimeInventario(Heap<Vehiculo>& heap) {
     cout << "-----------------------------------------------------------" << endl;
 }
 
-void BuscarPorPresupuesto(Heap<Vehiculo>& heap, float precioBuscado) {
+void BuscarPorPresupuesto(Heap<Vehiculo>& heap, float precioBuscado) {      //búsqueda y escritura
     ofstream archivoSalida("vehiculos_presupuesto.txt");
     if (!archivoSalida.is_open()) {
         cerr << "Error al abrir el archivo" << endl;
@@ -49,7 +49,7 @@ void BuscarPorPresupuesto(Heap<Vehiculo>& heap, float precioBuscado) {
     }
 
     int limite = 0;
-    for (int i = 0; i < heap.count && heap.data[i].getPrecio() <= precioBuscado; ++i ) {
+    for (int i = 0; i < heap.count && heap.data[i].getPrecio() <= precioBuscado; ++i ) { //encontramos el límite de nuestro presupuesto
         limite++;
     }
 
@@ -84,8 +84,8 @@ void BuscarPorPresupuesto(Heap<Vehiculo>& heap, float precioBuscado) {
     cout << "\nInventario guardado en 'vehiculos_presupuesto.txt'.\n";
 }
 
-string trim(const string& str) {         //Esta un poco confuso esto pero es la unica manera en la que me funcionó
-    size_t first = str.find_first_not_of(" \t");
+string trim(const string& str) {         //Función auxiliar (creada con IA) para que las entradas a la función
+    size_t first = str.find_first_not_of(" \t");        //cargarHeap sean reconocidas
     size_t last = str.find_last_not_of(" \t");    
     return (first == string::npos || last == string::npos) ? "" : str.substr(first, last - first + 1);
 }
