@@ -58,7 +58,7 @@ void BuscarPorPresupuesto(Heap<Vehiculo>& heap, float precioBuscado) {      //b�
     cout << "|    Marca    |   Tipo   |   Color   |  Año  |  Precio  |" << endl;
     cout << "-----------------------------------------------------------" << endl;
 
-    archivoSalida << "Vehículos dentro del presupuesto:\n";
+    archivoSalida << "Vehículos dentro del presupuesto: $" << precioBuscado << "\n";
     archivoSalida << "-----------------------------------------------------------\n";
     archivoSalida << "|    Marca    |   Tipo   |   Color   |  Año  |  Precio  |\n";
     archivoSalida << "-----------------------------------------------------------\n";
