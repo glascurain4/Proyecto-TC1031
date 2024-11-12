@@ -141,7 +141,7 @@ Heap<Vehiculo> cargarHeap(const string& nombreArchivo) { //Lectura de archivos !
 }
 
 int main() {
-    string archivo = "vehiculos.txt";
+    string archivo = "vehiculos.txt"; //archivo con el inventrario de ejemplo (creado con IA para evitar escribir uno por uno)
     Heap<Vehiculo> heap = cargarHeap(archivo);
     int opcion;
 
