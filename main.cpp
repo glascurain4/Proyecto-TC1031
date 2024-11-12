@@ -84,7 +84,7 @@ void BuscarPorPresupuesto(Heap<Vehiculo>& heap, float precioBuscado) {      //b�
     cout << "\nInventario guardado en 'vehiculos_presupuesto.txt'.\n";
 }
 
-string trim(const string& str) {         //Función auxiliar (creada con IA) para que las entradas a la función
+string trim(const string& str) {         //Función auxiliar (creada por ChatGPT) para que las entradas a la función
     size_t first = str.find_first_not_of(" \t");        //cargarHeap sean reconocidas
     size_t last = str.find_last_not_of(" \t");    
     return (first == string::npos || last == string::npos) ? "" : str.substr(first, last - first + 1);
@@ -141,7 +141,7 @@ Heap<Vehiculo> cargarHeap(const string& nombreArchivo) { //Lectura de archivos !
 }
 
 int main() {
-    string archivo = "vehiculos.txt"; //archivo con el inventrario de ejemplo (creado con IA para evitar escribir uno por uno)
+    string archivo = "vehiculos.txt"; //archivo con el inventrario de ejemplo (creado por ChatGPT para evitar escribir uno por uno)
     Heap<Vehiculo> heap = cargarHeap(archivo);
     int opcion;
 
