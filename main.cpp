@@ -42,24 +42,46 @@ void ImprimeInventario(Heap<Vehiculo>& heap) {
 }
 
 void BuscarPorPresupuesto(Heap<Vehiculo>& heap, float precioBuscado) {
+    ofstream archivoSalida("vehiculos_presupuesto.txt");
+    if (!archivoSalida.is_open()) {
+        cerr << "Error al abrir el archivo" << endl;
+        return;
+    }
+
     int limite = 0;
     for (int i = 0; i < heap.count && heap.data[i].getPrecio() <= precioBuscado; ++i ) {
         limite++;
     }
 
-    cout << "\nVehículos dentro del presupuesto:" << endl;
+    cout << "\nVehículos dentro del presupuesto: $" << precioBuscado << endl;
     cout << "-----------------------------------------------------------" << endl;
     cout << "|    Marca    |   Tipo   |   Color   |  Año  |  Precio  |" << endl;
     cout << "-----------------------------------------------------------" << endl;
 
+    archivoSalida << "Vehículos dentro del presupuesto:\n";
+    archivoSalida << "-----------------------------------------------------------\n";
+    archivoSalida << "|    Marca    |   Tipo   |   Color   |  Año  |  Precio  |\n";
+    archivoSalida << "-----------------------------------------------------------\n";
+
     for (int i = 0; i < limite; ++i) {
         cout << "| " << heap.data[i].getMarca() << " | "
-        << heap.data[i].getTipo() << " | "
-        << heap.data[i].getColor() << " | "
-        << heap.data[i].getAnio() << " | "
-        << " $ " << heap.data[i].getPrecio() << " |" << endl;
+             << heap.data[i].getTipo() << " | "
+             << heap.data[i].getColor() << " | "
+             << heap.data[i].getAnio() << " | "
+             << " $ " << heap.data[i].getPrecio() << " |" << endl;
+
+        archivoSalida << "| " << heap.data[i].getMarca() << " | "
+                      << heap.data[i].getTipo() << " | "
+                      << heap.data[i].getColor() << " | "
+                      << heap.data[i].getAnio() << " | "
+                      << " $ " << heap.data[i].getPrecio() << " |\n";
     }
+
     cout << "-----------------------------------------------------------" << endl;
+    archivoSalida << "-----------------------------------------------------------\n";
+
+    archivoSalida.close();
+    cout << "\nInventario guardado en 'vehiculos_presupuesto.txt'.\n";
 }
 
 string trim(const string& str) {         //Esta un poco confuso esto pero es la unica manera en la que me funcionó

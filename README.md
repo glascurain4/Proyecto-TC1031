@@ -55,8 +55,9 @@ Marca: La marca del vehículo (Toyota, Honda, Audi, etc.) (string)
 
 Año: El año de fabricación del vehículo (int)
 
-El programa utiliza lectura de archivos para cargar vehículos en grandes cantidades desde un archivo,
-a su vez el programa le da al usuario la opción de agregar y quitar vehículos del inventario por medio de una interfaz que le da varias opciones a seleccionar y procede a pedirle las caracteristicas del vehiculo en cuestión.
+El programa utiliza lectura de archivos para cargar vehículos en grandes cantidades.
+
+Opción: el programa le da al usuario la opción de agregar y quitar vehículos del inventario por medio de una interfaz que le da varias opciones a seleccionar y procede a pedirle las caracteristicas del vehiculo en cuestión. También le da la opción de establecer un presupuesto para buscar dentro del inventario disponible.
 
 ## Descripción de las salidas del proyecto
 
@@ -66,7 +67,7 @@ Inventario de vehículos: Una lista con los vehículos que contiene la informaci
 
 Resultado de eliminación: Un mensaje que indica el vehículo eliminado del inventario.
 
-Resultado de presupuesto: Una lista de los vehiculos por debajo del precio establecido como presupuesto.
+Resultado de presupuesto: Una lista de los vehiculos por debajo del precio establecido como presupuesto, tanto en la terminal como en un archivo de texto nuevo.
 
 ### Desarrollo de Competencias
 
@@ -101,9 +102,9 @@ Resultado de presupuesto: Una lista de los vehiculos por debajo del precio estab
 ### 3. **Análisis de Complejidad de Otros Componentes**
 
 #### Búsqueda de Vehículo por Precio (`BuscarPorPresupuesto`)
-- Este método recorre todo el arreglo hasta encontrar un vehiculo de mayor precio al establecido por el presupuesto.
+- Este método recorre el arreglo de vehículos en el `Heap` hasta que encuentra un vehículo con un precio superior al presupuesto especificado. Además, guarda en un archivo (`vehiculos_presupuesto.txt`) la lista de vehículos que cumplen con el presupuesto.
   - **Mejor caso**: \(O(1)\) si el primer vehículo está por encima del presupuesto.
-  - **Caso promedio y peor caso**: \(O(n)\) si debe recorrer el arreglo completo para encontrar los vehiuclos dentro del presupuesto.
+  - **Caso promedio y peor caso**: \(O(n)\) si debe recorrer el arreglo completo para encontrar todos los vehículos dentro del presupuesto y escribirlos en el archivo.
   
 #### Imprimir Inventario (`ImprimeInventario`)
 - Imprimir todo el inventario implica recorrer el arreglo completo y mostrar la información de cada vehículo, resultando en:
@@ -147,6 +148,5 @@ Vease:
 
 Archivo \(main.cpp\): Funciones `cargarHeap`(líneas 71-119) y `trim`(líneas 65-69)
 
-#### Pendiente
-Implementa mecanismos de escritura de archivos para guardar los datos de las estructuras de manera correcta
-Escribe aquí tus argumentos sobre por qué consideras que has desarrrollado esta competencia y dónde se puede observar el desarrollo que mencionas.
+
+Del mismo modo, me ayudé de varias fuentes para implementar de manera correcta a mi código la escritura de archivos, la verdad ya entendiendo un poco mejor como funcionadban a partir de prueba y error con las lecturas, no me pareció tan complicado. Lo implementé en la función `BuscarPorPresupuesto`, igualmente en el archivo de \(main.cpp\). (líneas 44-85)
