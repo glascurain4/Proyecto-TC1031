@@ -157,4 +157,6 @@ Del mismo modo, me ayudé de varias fuentes para implementar de manera correcta 
 
 # Problemas
 
-Problema 1: 148 Sort List https://youtu.be/eXSyfJfPjao
+Problema 1: [Sort List](https://youtu.be/eXSyfJfPjao)
+
+Problema 2: [Min Stack](https://youtu.be/uA2MfjPNMkg)
