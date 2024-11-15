@@ -160,3 +160,5 @@ Del mismo modo, me ayudé de varias fuentes para implementar de manera correcta 
 Problema 1: [Sort List](https://youtu.be/eXSyfJfPjao)
 
 Problema 2: [Min Stack](https://youtu.be/uA2MfjPNMkg)
+
+Problema 3: [Binary Treee Right Side View](https://youtu.be/tqLu339h3l8)
