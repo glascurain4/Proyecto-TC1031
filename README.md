@@ -1,6 +1,6 @@
-# Proyecto-TC1031
 
-### Vehicle Inventory Management
+
+# Vehicle Inventory Management
 Este programa permite gestionar un inventario de vehículos, proporcionando funcionalidades para ordenar el inventario, almacenando y ordenandolos por precio en forma de un árbol Min-Heap. Y permitiéndonos buscar un vehiculo por su precio utilizando una búsqueda secuencial.
 
 ## Descripción del avance 1
